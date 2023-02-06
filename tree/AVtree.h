@@ -13,7 +13,6 @@ class Node
 
 
 	    int max(int a, int b);
-	    int getHeight(Node *N);
 	    Node* newNode(float epsilon, int start, int end, int id, int leftchild);
 		Node* newNode(float epsilon, int start, int end, int id, Node *prev, int leftchild);
 		Node* newNode(float epsilon, int start, int end, int id);

@@ -18,7 +18,7 @@ endif
 OBJECTS = $(SOURCES:.cpp=.o)
 	
 
-all: main_range #main_knn
+all: main_range main_knn
 
 main_knn: $(OBJECTS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJECTS) main_knn.cpp -o knn $(LDADD)

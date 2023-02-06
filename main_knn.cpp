@@ -544,11 +544,11 @@ int main(int argc, char **argv) {
     int numPoints=0, dimension=0, numQueries;
     clock_t begin,end, beginPerQuery, endPerQuery;
 
-    while ((c = getopt(argc, argv, "lkohv:n:")) != -1)
+    while ((c = getopt(argc, argv, "lmoht:n:")) != -1)
     {
         switch (c)
         {
-            case 'v':
+            case 't':
                 CRACKTHRESHOLD = atoi(optarg);
                 break;
             case 'l':
@@ -557,7 +557,7 @@ int main(int argc, char **argv) {
             case 'n':
                 K = atoi(optarg);
                 break;
-            case 'k':
+            case 'm':
                 runProcessingMethod = KNNMediocre;
                 break;
             case 'o':
@@ -577,7 +577,7 @@ int main(int argc, char **argv) {
     cout << "Find " << K << "nn" << endl;
     if(K==0)
     {
-        cout << "K value in kNN cannot be zero\n";
+        cout << "nn value in kNN cannot be zero\n";
         exit(1);
     }
 

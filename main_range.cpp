@@ -2,7 +2,7 @@
 
 
 
-int CRACKTHRESHOLD = 0, K = 0, biggestWordSize = 0;
+int CRACKTHRESHOLD = 0, biggestWordSize = 0;
 Node *root;
 float **points, *distances, **queries;
 int *ids, *gc;
@@ -1241,11 +1241,11 @@ int main(int argc, char **argv) {
         std::cout << "L1 distance function" << std::endl;   
     #endif
 
-    while ((c = getopt(argc, argv, "lsmn:chv:")) != -1)
+    while ((c = getopt(argc, argv, "lsmcht:")) != -1)
     {
         switch (c)
         {
-            case 'v':
+            case 't':
                 CRACKTHRESHOLD = atoi(optarg);
                break;
             case 'l':
@@ -1259,9 +1259,6 @@ int main(int argc, char **argv) {
                 break;
             case 'c':
                 runProcessingMethod = MEDIOCRE_CACHE;
-                break;
-            case 'n':
-                K = atoi(optarg);
                 break;
             case '?':
                 exit(0);
