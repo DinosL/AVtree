@@ -13,7 +13,6 @@ class Node
 		int leftchild;
 
 
-	    int maxString(int a, int b);
 	    Node* newNodeString(float epsilon, int start, int end, int id, int leftchild);
 		Node* newNodeString(float epsilon, int start, int end, int id, Node *prev, int leftchild);
 		Node* newNodeString(float epsilon, int start, int end, int id);

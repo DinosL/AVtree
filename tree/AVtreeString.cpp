@@ -1,10 +1,5 @@
 #include "../def.h"
 
-int Node::maxString(int a, int b)
-{
-    return (a > b)? a : b;
-}
-
 Node* Node::newNodeString(float epsilon, int start, int end, int id, Node *prevNode, int leftchild)
 {
     Node* node = new Node();

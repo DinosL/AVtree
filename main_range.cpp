@@ -1234,11 +1234,11 @@ int main(int argc, char **argv) {
     clock_t begin,end, beginPerQuery, endPerQuery;
 
     #ifdef L2
-        std::cout << "L2" << std::endl;   
+        std::cout << "L2 distance function" << std::endl;   
     #elif ED
-        std::cout << "Edit Distance" << std::endl;   
+        std::cout << "Edit Distance function" << std::endl;   
     #elif L1
-        std::cout << "L1" << std::endl;   
+        std::cout << "L1 distance function" << std::endl;   
     #endif
 
     while ((c = getopt(argc, argv, "lsmn:chv:")) != -1)
@@ -1270,7 +1270,6 @@ int main(int argc, char **argv) {
                 break;
         }
     }
-    cout << "after arguments\n";
     cout << "Point dataset : " << argv[optind] << endl;
     cout << "Query dataset : " << argv[optind+1] << endl;
     cout << "threshold: " << CRACKTHRESHOLD << endl;

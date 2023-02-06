@@ -10,11 +10,15 @@ else
 endif
 
 
-SOURCES = tree/AVtree.cpp tree/AVtreeString.cpp
+ifeq ($(distFunc), L2)
+	SOURCES = tree/AVtree.cpp
+else
+	SOURCES = tree/AVtreeString.cpp
+endif
 OBJECTS = $(SOURCES:.cpp=.o)
 	
 
-all: main_range main_knn
+all: main_range #main_knn
 
 main_knn: $(OBJECTS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJECTS) main_knn.cpp -o knn $(LDADD)
